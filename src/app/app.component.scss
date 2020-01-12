@@ -27,6 +27,7 @@
   .toolbar {
     height: 60px;
     margin: -8px;
+    padding-left: 20px;
     display: flex;
     align-items: center;
     background-color: #1976d2;
@@ -74,6 +75,10 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 16px;
+  }
+
+  .example-container {
+    height: 100%;
   }
 
   .card {

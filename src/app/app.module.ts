@@ -8,7 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import { MatMenuModule} from '@angular/material/menu'
+import { MatMenuModule} from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MatMenuModule} from '@angular/material/menu'
     AppRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    MatSliderModule
+    MatSidenavModule,
+    MatSliderModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,14 +1,19 @@
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
 <div class="toolbar" role="banner">
-  <span>Demo Ts</span>
-  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-  </mat-menu>
+  <span>Demo Angular 8</span>
+  <mat-tab-group>
+    <mat-tab label="Home">
+    </mat-tab>
+    <mat-tab label="Contact">
+   </mat-tab>
+  </mat-tab-group>
 </div>
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+  <mat-drawer-content>
+    <div class="content" role="main">
+      <easy-date titleInput='Input your date:'></easy-date>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
 
-<div class="content" role="main">
-  <easy-date titleInput='Input your date:'></easy-date>
-</div>
-<router-outlet></router-outlet>

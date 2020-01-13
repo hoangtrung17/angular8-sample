@@ -11,13 +11,15 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatMenuModule} from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material';
 import {MatTabsModule} from '@angular/material/tabs';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DateInputComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

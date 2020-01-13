@@ -1,11 +1,11 @@
 <div class="toolbar" role="banner">
   <span>Demo Angular 8</span>
-  <mat-tab-group>
-    <mat-tab label="Home">
-    </mat-tab>
-    <mat-tab label="Contact">
-   </mat-tab>
-  </mat-tab-group>
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive"
+      [active]="rla.isActive">
+      {{link.label}}
+    </a>
+  </nav>
 </div>
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>Drawer content</mat-drawer>
@@ -16,4 +16,3 @@
     </div>
   </mat-drawer-content>
 </mat-drawer-container>
-

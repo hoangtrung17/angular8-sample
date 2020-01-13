@@ -5,14 +5,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
   API_KEY = 'YOUR_API_KEY';
-  localUrl = "http://localhost:3000/"
+  localUrl = "http://localhost:3300/"
 
   constructor(private http: HttpClient) {
   }
-  getBokings() {
-    return this.http.get(this.localUrl+'bookings');
+  getPost() {
+    return this.http.get(this.localUrl + 'post');
   }
-  getInvoices() {
-    return this.http.get(this.localUrl+'invoices');
+  getComments() {
+    return this.http.get(this.localUrl + 'comments');
+  }
+
+  getUsers() {
+    return this.http.get(this.localUrl + 'users');
   }
 }

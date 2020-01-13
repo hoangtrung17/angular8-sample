@@ -7,18 +7,19 @@
     </a>
   </nav>
 </div>
-<mat-drawer-container class="example-container" [hasBackdrop]="false">
-  <mat-drawer #drawer [mode]="side">
-    <mat-nav-list>
-      <a mat-list-item routerLink='bookings'>Bookings</a>
-      <a mat-list-item routerLink='invoices'>Invoices</a>
-    </mat-nav-list>
+<mat-drawer-container class="example-container" hasBackdrop="false">
+  <mat-drawer #drawer mode="side">
+    <mat-nav-list >
+      <a mat-list-item routerLink='posts'>Posts</a>
+      <a mat-list-item routerLink='users'>Users</a>
+    </mat-nav-list >
   </mat-drawer>
   <mat-drawer-content>
-    <div class="content" role="main">
-      <easy-date titleInput='Input your date:'></easy-date>
-      <router-outlet></router-outlet>
-    </div>
+    <!-- <div class="content" role="main"> -->
+      <!-- <easy-date titleInput='Input your date:'></easy-date> -->
+    <!-- </div> -->
+    <router-outlet></router-outlet>
+
     <button mat-raised-button (click)="drawer.toggle()">+</button>
   </mat-drawer-content>
 </mat-drawer-container>

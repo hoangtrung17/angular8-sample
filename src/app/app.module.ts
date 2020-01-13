@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DateInputComponent } from './date-input/date-input.component';
+import { DateInputComponent } from './components/date-input/date-input.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,9 +13,11 @@ import { MatSidenavModule } from '@angular/material';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { BookingsComponent } from './bookings/bookings.component';
-import { InvoicesComponent } from './invoices/invoices.component';
+import { PostsComponent } from './posts/posts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CommentsComponent } from './comments/comments.component';
+import { UsersComponent } from './users/users.component';
+import { DemoContentComponent } from './components/demo-content/demo-content.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,10 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ContactComponent,
     DashboardComponent,
-    BookingsComponent,
-    InvoicesComponent
+    PostsComponent,
+    CommentsComponent,
+    UsersComponent,
+    DemoContentComponent
   ],
   imports: [
     BrowserModule,

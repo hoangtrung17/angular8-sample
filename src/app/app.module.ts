@@ -8,10 +8,13 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import { MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatListModule } from '@angular/material/list';
+import { MatTabsModule } from '@angular/material/tabs';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BookingsComponent } from './bookings/bookings.component';
+import { InvoicesComponent } from './invoices/invoices.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DateInputComponent,
     HomeComponent,
     ContactComponent,
-    DashboardComponent
+    DashboardComponent,
+    BookingsComponent,
+    InvoicesComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatMenuModule,
     MatSidenavModule,
     MatSliderModule,
-    MatTabsModule
+    MatTabsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

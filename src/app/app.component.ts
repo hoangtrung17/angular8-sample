@@ -1,5 +1,5 @@
 import { Component, OnInit  } from '@angular/core';
-
+import { faAlignJustify } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'demo-angular8';
+  faAlignJustify = faAlignJustify;
   navLinks: any[];
   activeLinkIndex = -1;
   constructor(private router: Router) {

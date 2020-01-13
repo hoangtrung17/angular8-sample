@@ -39,6 +39,15 @@
     margin: 0 16px;
   }
 
+  .mini-left-nav {
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    z-index: 999;
+    border-radius: 10px;
+  }
+
+
   .toolbar #twitter-logo {
     height: 40px;
     margin: 0 16px;

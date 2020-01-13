@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommentsComponent } from './comments/comments.component';
 import { UsersComponent } from './users/users.component';
 import { DemoContentComponent } from './components/demo-content/demo-content.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DemoContentComponent } from './components/demo-content/demo-content.com
     MatSliderModule,
     MatTabsModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,6 +15,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookingsComponent } from './bookings/bookings.component';
 import { InvoicesComponent } from './invoices/invoices.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { InvoicesComponent } from './invoices/invoices.component';
     MatSidenavModule,
     MatSliderModule,
     MatTabsModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

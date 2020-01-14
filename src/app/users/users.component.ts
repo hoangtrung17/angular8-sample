@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-users',
@@ -9,7 +10,8 @@ import { ApiService } from '../api.service';
 export class UsersComponent implements OnInit {
 
   users: any = [];
-
+  displayedColumns: string[] = ['userName', 'email', 'phone', 'action'];
+  dataSource = new MatTableDataSource<any>(this.users);
 
   ngOnInit() {
     this.loadUsers();
@@ -17,21 +19,22 @@ export class UsersComponent implements OnInit {
 
   constructor(
     public Service: ApiService
-  ) { }
+  ) {}
 
   // Users list
   loadUsers() {
     return this.Service.GetUsers().subscribe((data: {}) => {
       this.users = data;
+      this.dataSource = new MatTableDataSource<any>(this.users);
     })
   }
 
-  // Delete issue
-  deleteUser(data) {
-    var index = index = this.users.map(x => { return x.issue_name }).indexOf(data.issue_name);
-    return this.Service.DeleteUser(data.id).subscribe(res => {
-      this.users.splice(index, 1)
-      console.log('Issue deleted!')
+  // Delete User
+  deleteUser(user) {
+    var index = this.users.map(x => { return x._id }).indexOf(user._id);
+    return this.Service.DeleteUser(user._id).subscribe(res => {
+      this.users.splice(index, 1);
+      this.dataSource = new MatTableDataSource<any>(this.users);
     })
   }
 

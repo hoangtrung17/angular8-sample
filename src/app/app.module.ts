@@ -9,7 +9,13 @@ import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatSidenavModule } from '@angular/material';
+import {
+  MatSidenavModule, 
+  MatTableModule, 
+  MatButtonModule,
+  MatFormFieldModule,
+  MatInputModule
+} from '@angular/material'
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -47,7 +53,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FontAwesomeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
+  ],
+  exports: [
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

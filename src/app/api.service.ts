@@ -83,6 +83,24 @@ export class ApiService {
       )
   }
 
+  //Update post
+  UpdatePosts(data): Observable<Post> {
+    return this.http.post<Post>(this.baseurl + '/post/' + data._id, JSON.stringify(data), this.httpOptions)
+      .pipe(
+        retry(1),
+        catchError(this.errorHandl)
+      )
+  }
+
+  //Delete post
+  DeletePost(id){
+    return this.http.delete<Post>(this.baseurl + '/posts/' + id, this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }
+
   // Error handling
   errorHandl(error) {
     let errorMessage = '';

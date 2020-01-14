@@ -21,6 +21,14 @@ export class PostsComponent implements OnInit {
     this.loadPosts();
   }
 
+  deletePost(post) {
+      var index = this.posts.map(x => { return x._id }).indexOf(post._id);
+      return this.Service.DeletePost(post._id).subscribe((data: {}) => {
+      this.posts.splice(index, 1);
+      this.notifier.notify("success", "Deleted user has name is " + post.title + "!");
+    })
+  }
+
   // Load list post
   loadPosts() {
     return this.Service.GetPosts().subscribe((data: {}) => {

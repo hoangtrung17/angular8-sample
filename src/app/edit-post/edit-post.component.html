@@ -1,0 +1,25 @@
+<a8-header contentTitle="Edit Post"> </a8-header>
+<div class="container wrapper wrapper2">
+    <div class="row">
+        <!-- Form -->
+        <div class="col-md-12">
+            <form class="example-form" [formGroup]="postForm" (ngSubmit)="submitForm()" novalidate>
+                <mat-form-field>
+                    <mat-select *ngIf="users.length" formControlName="author" placeholder="Select Author">
+                        <mat-option *ngFor="let user of users" value="{{user.userName}}">{{user.userName}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="title" placeholder="Title">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="image" placeholder="Image Url">
+                </mat-form-field>
+                <mat-form-field>
+                    <textarea matInput formControlName="body" placeholder="Enter content here"></textarea>
+                </mat-form-field>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

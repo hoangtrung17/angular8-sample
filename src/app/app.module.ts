@@ -30,7 +30,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddUserComponent } from './add-user/add-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddPostComponent } from './add-post/add-post.component';
-import {MatCardModule} from '@angular/material/card'
+import { MatCardModule } from '@angular/material/card';
+import { EditPostComponent } from './edit-post/edit-post.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import {MatCardModule} from '@angular/material/card'
     UsersComponent,
     DemoContentComponent,
     AddUserComponent,
-    AddPostComponent
+    AddPostComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,

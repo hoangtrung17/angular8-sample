@@ -2,6 +2,7 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { ApiService } from '../api.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NotifierService } from "angular-notifier";
 
 @Component({
   selector: 'app-add-user',
@@ -10,12 +11,16 @@ import { Router } from '@angular/router';
 })
 export class AddUserComponent implements OnInit {
   userForm: FormGroup;
+  notifier: NotifierService;
   constructor(
     public fb: FormBuilder,
     private ngZone: NgZone,
     private router: Router,
-    public Service: ApiService
-    ) {}
+    public Service: ApiService,
+    notifierService: NotifierService
+    ) {
+      this.notifier = notifierService;
+    }
 
   ngOnInit() {
     this.addUser()
@@ -31,9 +36,8 @@ export class AddUserComponent implements OnInit {
 
   submitForm() {
     this.Service.CreateUser(this.userForm.value).subscribe(res => {
-      console.log('User added!')
+      this.notifier.notify("success", "Add new user success!");
       this.ngZone.run(() => this.router.navigateByUrl('/users'))
     });
   }
-
 }

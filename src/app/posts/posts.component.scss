@@ -1,4 +1,18 @@
 :host {
   display: block;
   width: 100%;
+  .example-card {
+    width: 400px;
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+
+  .btn-add {
+    position: absolute;
+    right: 10px;
+  }
 }

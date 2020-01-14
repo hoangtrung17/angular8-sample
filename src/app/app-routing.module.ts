@@ -8,6 +8,7 @@ import { PostsComponent } from './posts/posts.component';
 import { UsersComponent } from './users/users.component';
 import { ContactComponent } from './contact/contact.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { AddPostComponent } from './add-post/add-post.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'posts', component: PostsComponent },
   { path: 'users', component: UsersComponent },
   { path: 'add-user', component: AddUserComponent },
+  { path: 'add-post', component: AddPostComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 export const appRouting = RouterModule.forRoot(routes);

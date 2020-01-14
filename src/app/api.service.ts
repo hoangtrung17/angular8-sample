@@ -29,6 +29,15 @@ export class ApiService {
       )
   }
 
+  // Create post
+  CreatePosts(data): Observable<Post> {
+    return this.http.post<Post>(this.baseurl + '/posts/', JSON.stringify(data), this.httpOptions)
+      .pipe(
+        retry(1),
+        catchError(this.errorHandl)
+      )
+  }
+
   // GET
   GetUser(id): Observable<User> {
     return this.http.get<User>(this.baseurl + '/users/' + id)
@@ -56,8 +65,17 @@ export class ApiService {
     )
   }
 
-  // GET
-  GetPosts(id): Observable<Post> {
+   // GET POSTS
+   GetPosts(): Observable<Post> {
+    return this.http.get<Post>(this.baseurl + '/posts')
+      .pipe(
+        retry(1),
+        catchError(this.errorHandl)
+      )
+  }
+
+  // GET POST BY ID
+  GetPost(id): Observable<Post> {
     return this.http.get<Post>(this.baseurl + '/post/' + id)
       .pipe(
         retry(1),

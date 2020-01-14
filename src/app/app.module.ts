@@ -9,12 +9,14 @@ import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatMenuModule } from '@angular/material/menu';
+import { NotifierModule } from "angular-notifier";
 import {
-  MatSidenavModule, 
-  MatTableModule, 
+  MatSidenavModule,
+  MatTableModule,
   MatButtonModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatSelectModule
 } from '@angular/material'
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -27,7 +29,8 @@ import { DemoContentComponent } from './components/demo-content/demo-content.com
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddUserComponent } from './add-user/add-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { AddPostComponent } from './add-post/add-post.component';
+import {MatCardModule} from '@angular/material/card'
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +42,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommentsComponent,
     UsersComponent,
     DemoContentComponent,
-    AddUserComponent
+    AddUserComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,
@@ -56,11 +60,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatCardModule,
+    NotifierModule.withConfig({})
   ],
   exports: [
     MatButtonModule,
     MatFormFieldModule,
+    MatSelectModule,
     MatInputModule
   ],
   providers: [ApiService],

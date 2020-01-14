@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { ApiService } from './api.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DateInputComponent } from './components/date-input/date-input.component';
@@ -19,6 +19,8 @@ import { CommentsComponent } from './comments/comments.component';
 import { UsersComponent } from './users/users.component';
 import { DemoContentComponent } from './components/demo-content/demo-content.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AddUserComponent } from './add-user/add-user.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PostsComponent,
     CommentsComponent,
     UsersComponent,
-    DemoContentComponent
+    DemoContentComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
@@ -42,9 +45,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatTabsModule,
     MatListModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

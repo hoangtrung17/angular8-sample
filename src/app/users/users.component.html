@@ -1,4 +1,6 @@
-<a8-header contentTitle="Users"> </a8-header>
+<button class="btn-add" [routerLink]="['/add-user']"> Create User</button>
+<a8-header contentTitle="Users">
+</a8-header>
 <div class="container wrapper">
     <div class="row">
         <!-- User table -->
@@ -22,7 +24,8 @@
                             <td>{{user.phone}}</td>
                             <td>
                                 <!-- <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/edit-User/', Users.id]">Edit</button> -->
-                                <button type="button" class="btn btn-danger btn-sm" (click)="deleteIusse(Users)">Remove</button>
+                                <button type="button" class="btn btn-danger btn-sm"
+                                    (click)="deleteIusse(Users)">Remove</button>
                             </td>
                         </tr>
                     </tbody>

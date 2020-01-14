@@ -23,9 +23,9 @@ export class AddUserComponent implements OnInit {
 
   addUser() {
     this.userForm = this.fb.group({
-      user_name: [''],
-      user_email: [''],
-      user_phone: ['']
+      userName: [''],
+      email: [''],
+      phone: ['']
     })
   }
 
